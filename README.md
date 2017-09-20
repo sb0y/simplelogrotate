@@ -1,6 +1,7 @@
 # Simple logger with rotation
 
 Just a class on C++ which carries out a rotation of logs if their size too big.
+Depends on Linux.
 
 # How to use
 
