@@ -1,0 +1,64 @@
+{
+  "variant": {
+    "label": "Debug",
+    "keywordSettings": {
+      "buildType": "debug"
+    },
+    "description": "Emit debug information without performing optimizations"
+  },
+  "activeEnvironments": [],
+  "codeModel": {
+    "configurations": [
+      {
+        "name": "Debug",
+        "projects": [
+          {
+            "buildDirectory": "/home/sb0y/projects/logrotate/build",
+            "name": "logrotate",
+            "sourceDirectory": "/home/sb0y/projects/logrotate",
+            "targets": [
+              {
+                "artifacts": [
+                  "/home/sb0y/projects/logrotate/build/logrotate"
+                ],
+                "buildDirectory": "/home/sb0y/projects/logrotate/build",
+                "fileGroups": [
+                  {
+                    "isGenerated": false,
+                    "sources": [
+                      "logrotate.hpp"
+                    ]
+                  },
+                  {
+                    "compileFlags": "-g -fPIE   -Wall -Werror -Wextra -pedantic -std=c++14",
+                    "includePath": [
+                      {
+                        "path": "/home/sb0y/projects/logrotate"
+                      }
+                    ],
+                    "isGenerated": false,
+                    "language": "CXX",
+                    "sources": [
+                      "logrotate.cpp",
+                      "main.cpp"
+                    ]
+                  }
+                ],
+                "fullName": "logrotate",
+                "linkLanguageFlags": "-g",
+                "linkLibraries": "-rdynamic -lpthread",
+                "linkerLanguage": "CXX",
+                "name": "logrotate",
+                "sourceDirectory": "/home/sb0y/projects/logrotate",
+                "type": "EXECUTABLE"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "cookie": "0.2886513876793637",
+    "inReplyTo": "codemodel",
+    "type": "reply"
+  }
+}
