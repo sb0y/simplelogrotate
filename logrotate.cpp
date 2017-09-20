@@ -172,8 +172,12 @@ bool logrotate::rotate( fileList_t &dirList )
 				if( &f == &dirList.back() ) { // this our last iteration					
 					if( _number > static_cast< int >( dirList.size() ) ) {
 						std::cout << "Creating new log file ..." << std::endl;
-						renameAllFiles( dirList );
-						return createAndWriteHelper( dirList.size() );
+						if( renameAllFiles( dirList ) )
+							return createAndWriteHelper( dirList.size() );
+						} else {
+							std::cerr << "Failed to normalize log files names!" << std::endl;
+							return false;
+						}
 					} else {
 						std::string el = dirList.back().first;
 						if( remove( el ) ) {
