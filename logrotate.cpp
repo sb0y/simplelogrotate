@@ -32,10 +32,7 @@ logrotate::logrotate( int vNumber, int vMaxSize, const std::string &path )
 	}
 }
 
-logrotate::~logrotate()
-{
-	
-}
+logrotate::~logrotate() = default;
 
 void logrotate::Write( const std::string &vText )
 {
